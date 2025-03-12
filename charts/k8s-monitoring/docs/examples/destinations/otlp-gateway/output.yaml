@@ -2,15 +2,16 @@
 # Source: k8s-monitoring/charts/alloy-logs/templates/serviceaccount.yaml
 apiVersion: v1
 kind: ServiceAccount
+automountServiceAccountToken: true
 metadata:
   name: k8smon-alloy-logs
   namespace: default
   labels:
-    helm.sh/chart: alloy-logs-0.10.1
+    helm.sh/chart: alloy-logs-0.12.3
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/instance: k8smon
     
-    app.kubernetes.io/version: "v1.5.1"
+    app.kubernetes.io/version: "v1.7.2"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: alloy
     app.kubernetes.io/component: rbac
@@ -18,15 +19,16 @@ metadata:
 # Source: k8s-monitoring/charts/alloy-metrics/templates/serviceaccount.yaml
 apiVersion: v1
 kind: ServiceAccount
+automountServiceAccountToken: true
 metadata:
   name: k8smon-alloy-metrics
   namespace: default
   labels:
-    helm.sh/chart: alloy-metrics-0.10.1
+    helm.sh/chart: alloy-metrics-0.12.3
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/instance: k8smon
     
-    app.kubernetes.io/version: "v1.5.1"
+    app.kubernetes.io/version: "v1.7.2"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: alloy
     app.kubernetes.io/component: rbac
@@ -2153,11 +2155,11 @@ kind: ClusterRole
 metadata:
   name: k8smon-alloy-logs
   labels:
-    helm.sh/chart: alloy-logs-0.10.1
+    helm.sh/chart: alloy-logs-0.12.3
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/instance: k8smon
     
-    app.kubernetes.io/version: "v1.5.1"
+    app.kubernetes.io/version: "v1.7.2"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: alloy
     app.kubernetes.io/component: rbac
@@ -2253,11 +2255,11 @@ kind: ClusterRole
 metadata:
   name: k8smon-alloy-metrics
   labels:
-    helm.sh/chart: alloy-metrics-0.10.1
+    helm.sh/chart: alloy-metrics-0.12.3
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/instance: k8smon
     
-    app.kubernetes.io/version: "v1.5.1"
+    app.kubernetes.io/version: "v1.7.2"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: alloy
     app.kubernetes.io/component: rbac
@@ -2509,11 +2511,11 @@ kind: ClusterRoleBinding
 metadata:
   name: k8smon-alloy-logs
   labels:
-    helm.sh/chart: alloy-logs-0.10.1
+    helm.sh/chart: alloy-logs-0.12.3
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/instance: k8smon
     
-    app.kubernetes.io/version: "v1.5.1"
+    app.kubernetes.io/version: "v1.7.2"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: alloy
     app.kubernetes.io/component: rbac
@@ -2532,11 +2534,11 @@ kind: ClusterRoleBinding
 metadata:
   name: k8smon-alloy-metrics
   labels:
-    helm.sh/chart: alloy-metrics-0.10.1
+    helm.sh/chart: alloy-metrics-0.12.3
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/instance: k8smon
     
-    app.kubernetes.io/version: "v1.5.1"
+    app.kubernetes.io/version: "v1.7.2"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: alloy
     app.kubernetes.io/component: rbac
@@ -2577,12 +2579,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: k8smon-alloy-logs
+  namespace: default
   labels:
-    helm.sh/chart: alloy-logs-0.10.1
+    helm.sh/chart: alloy-logs-0.12.3
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/instance: k8smon
     
-    app.kubernetes.io/version: "v1.5.1"
+    app.kubernetes.io/version: "v1.7.2"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: alloy
     app.kubernetes.io/component: networking
@@ -2603,12 +2606,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: k8smon-alloy-metrics-cluster
+  namespace: default
   labels:
-    helm.sh/chart: alloy-metrics-0.10.1
+    helm.sh/chart: alloy-metrics-0.12.3
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/instance: k8smon
     
-    app.kubernetes.io/version: "v1.5.1"
+    app.kubernetes.io/version: "v1.7.2"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: alloy
     app.kubernetes.io/component: networking
@@ -2636,12 +2640,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: k8smon-alloy-metrics
+  namespace: default
   labels:
-    helm.sh/chart: alloy-metrics-0.10.1
+    helm.sh/chart: alloy-metrics-0.12.3
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/instance: k8smon
     
-    app.kubernetes.io/version: "v1.5.1"
+    app.kubernetes.io/version: "v1.7.2"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: alloy
     app.kubernetes.io/component: networking
@@ -2700,8 +2705,6 @@ metadata:
     app.kubernetes.io/instance: k8smon
     app.kubernetes.io/version: "1.8.2"
     release: k8smon
-  annotations:
-    prometheus.io/scrape: "true"
 spec:
   type: ClusterIP
   ports:
@@ -2747,12 +2750,13 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: k8smon-alloy-logs
+  namespace: default
   labels:
-    helm.sh/chart: alloy-logs-0.10.1
+    helm.sh/chart: alloy-logs-0.12.3
     app.kubernetes.io/name: alloy-logs
     app.kubernetes.io/instance: k8smon
     
-    app.kubernetes.io/version: "v1.5.1"
+    app.kubernetes.io/version: "v1.7.2"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: alloy
 spec:
@@ -2772,7 +2776,7 @@ spec:
       serviceAccountName: k8smon-alloy-logs
       containers:
         - name: alloy
-          image: docker.io/grafana/alloy:v1.5.1
+          image: docker.io/grafana/alloy:v1.7.2
           imagePullPolicy: IfNotPresent
           args:
             - run
@@ -2830,7 +2834,7 @@ spec:
               mountPath: /var/lib/docker/containers
               readOnly: true
         - name: config-reloader
-          image: ghcr.io/jimmidyson/configmap-reload:v0.12.0
+          image: ghcr.io/jimmidyson/configmap-reload:v0.14.0
           args:
             - --volume-dir=/etc/alloy
             - --webhook-url=http://localhost:12345/-/reload
@@ -3178,12 +3182,13 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: k8smon-alloy-metrics
+  namespace: default
   labels:
-    helm.sh/chart: alloy-metrics-0.10.1
+    helm.sh/chart: alloy-metrics-0.12.3
     app.kubernetes.io/name: alloy-metrics
     app.kubernetes.io/instance: k8smon
     
-    app.kubernetes.io/version: "v1.5.1"
+    app.kubernetes.io/version: "v1.7.2"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: alloy
 spec:
@@ -3207,7 +3212,7 @@ spec:
       serviceAccountName: k8smon-alloy-metrics
       containers:
         - name: alloy
-          image: docker.io/grafana/alloy:v1.5.1
+          image: docker.io/grafana/alloy:v1.7.2
           imagePullPolicy: IfNotPresent
           args:
             - run
@@ -3262,7 +3267,7 @@ spec:
             - name: config
               mountPath: /etc/alloy
         - name: config-reloader
-          image: ghcr.io/jimmidyson/configmap-reload:v0.12.0
+          image: ghcr.io/jimmidyson/configmap-reload:v0.14.0
           args:
             - --volume-dir=/etc/alloy
             - --webhook-url=http://localhost:12345/-/reload
