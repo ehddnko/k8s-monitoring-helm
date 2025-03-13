@@ -28,9 +28,9 @@ dependencies:
   version: 1.43.0
 - name: kepler
   repository: https://sustainable-computing-io.github.io/kepler-helm-chart
-  version: 0.5.12
+  version: 0.5.13
 - name: beyla
   repository: https://grafana.github.io/helm-charts
   version: 1.5.0
-digest: sha256:79efb53fee01a2e75328fc2ca076b983dd1022330332d8c5e290a462a39bf7e8
-generated: "2025-01-02T08:30:50.202914-06:00"
+digest: sha256:b9fb126828487974109a98e01821180f94e9358287e7bdcb36e5df972cba2950
+generated: "2025-03-13T01:06:57.110901439Z"
