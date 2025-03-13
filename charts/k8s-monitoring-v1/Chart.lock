@@ -25,12 +25,12 @@ dependencies:
   version: 0.7.1
 - name: opencost
   repository: https://opencost.github.io/opencost-helm-chart
-  version: 1.43.0
+  version: 1.43.2
 - name: kepler
   repository: https://sustainable-computing-io.github.io/kepler-helm-chart
   version: 0.5.12
 - name: beyla
   repository: https://grafana.github.io/helm-charts
   version: 1.5.0
-digest: sha256:79efb53fee01a2e75328fc2ca076b983dd1022330332d8c5e290a462a39bf7e8
-generated: "2025-01-02T08:30:50.202914-06:00"
+digest: sha256:ec959ec68e7d0896c09ac4b717a5cd3ab845e31b8261ba42d6e3bf6caa480f4c
+generated: "2025-03-13T01:06:56.375068356Z"
