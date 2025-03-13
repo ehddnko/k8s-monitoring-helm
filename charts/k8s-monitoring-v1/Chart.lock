@@ -1,16 +1,16 @@
 dependencies:
 - name: alloy
   repository: https://grafana.github.io/helm-charts
-  version: 0.10.1
+  version: 0.12.3
 - name: alloy
   repository: https://grafana.github.io/helm-charts
-  version: 0.10.1
+  version: 0.12.3
 - name: alloy
   repository: https://grafana.github.io/helm-charts
-  version: 0.10.1
+  version: 0.12.3
 - name: alloy
   repository: https://grafana.github.io/helm-charts
-  version: 0.10.1
+  version: 0.12.3
 - name: kube-state-metrics
   repository: https://prometheus-community.github.io/helm-charts
   version: 5.28.0
@@ -32,5 +32,5 @@ dependencies:
 - name: beyla
   repository: https://grafana.github.io/helm-charts
   version: 1.5.0
-digest: sha256:79efb53fee01a2e75328fc2ca076b983dd1022330332d8c5e290a462a39bf7e8
-generated: "2025-01-02T08:30:50.202914-06:00"
+digest: sha256:2c8c7bde636748cbf6bd72e599203090e8131f9479adcfb8dc94aacf7635dbbf
+generated: "2025-03-13T01:07:26.995874012Z"
