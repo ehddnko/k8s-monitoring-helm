@@ -22,7 +22,7 @@ dependencies:
   version: 17.0.2
 - name: prometheus-windows-exporter
   repository: https://prometheus-community.github.io/helm-charts
-  version: 0.7.1
+  version: 0.9.0
 - name: opencost
   repository: https://opencost.github.io/opencost-helm-chart
   version: 1.43.0
@@ -32,5 +32,5 @@ dependencies:
 - name: beyla
   repository: https://grafana.github.io/helm-charts
   version: 1.5.0
-digest: sha256:79efb53fee01a2e75328fc2ca076b983dd1022330332d8c5e290a462a39bf7e8
-generated: "2025-01-02T08:30:50.202914-06:00"
+digest: sha256:932c7b0392fc7fd3ddb669175bce6eda320ae6fda2ee62e85f34023c4e1be2b7
+generated: "2025-03-13T01:06:56.969028676Z"
